@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙婉佳制造</title>
+    
+    <!-- 网站标签中的图标 -->
+    <link rel="icon" href="https://p0.meituan.net/csc/3100659f21d751df74c2a67e72f746731150.ico" type="image/x-icon">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .cool-image {
+            width: 100%;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .cool-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+            text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #00f, 0 0 40px #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 图片 -->
+        <img src="https://img.meituan.net/csc/d4514047068f8b9ab29868986bc11096194855.jpg" alt="Cool Image" class="cool-image" id="image">
+        
+        <!-- 文字 -->
+        <h1 class="cool-text" id="text">刘承轩是个大傻逼</h1>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const image = document.getElementById('image');
+            const text = document.getElementById('text');
+
+            // 图片渐显
+            setTimeout(function () {
+                image.style.opacity = 1;
+            }, 500);
+
+            // 文字出现炫酷效果
+            setTimeout(function () {
+                text.style.opacity = 1;
+                text.style.transform = 'translate(-50%, -70%)';
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
